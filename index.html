@@ -4,17 +4,71 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <title>CodeMyDream</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <!-- fullPage.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Chakra+Petch:wght@300&family=Righteous&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <div class="bg-img">
-      <img src="https://t4.ftcdn.net/jpg/01/01/97/41/360_F_101974188_JmL9UeRv9Vr5Xgy2mLYDy0p1cCKvixes.jpg" alt="work in progress" />
-      <div class="center">
-        <h1>CODE MY DREAM</h1>
-        <p>Jenna's Page</p>
-        <br />
+    <!--hamburger menu-->
+    <div id="nav_icon">
+      <div>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
+    </div>
+    <!--when icon clicked-->
+    <nav class="nav">
+      <ul>
+        <li><a href="#Num0">Home</a></li>
+        <li><a href="#Num1">About me</a></li>
+        <li><a href="#Num2">Projects</a></li>
+        <li><a href="#Num3">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Sections -->
+    <div id="fullpage">
+      <section id="sec0" class="section">
+        <div class="landing_inner">
+          <div class="animated-title">
+            <div class="text-top">
+              <div>
+                <span>CODE</span>
+                <span>MY DREAM</span>
+              </div>
+            </div>
+            <div class="text-bottom">
+              <div>
+                <p>Jenna Petersen 2022</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="sec1" class="section">
+        <div class="inner">
+          <h1 class="title">About me</h1>
+        </div>
+      </section>
+      <section id="sec2" class="section">
+        <div class="inner">
+          <h1 class="title">Projects</h1>
+        </div>
+      </section>
+
+      <section id="sec3" class="section">
+        <div class="inner">
+          <h1 class="title">Contact</h1>
+        </div>
+      </section>
     </div>
   </body>
 </html>
