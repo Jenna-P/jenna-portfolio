@@ -206,11 +206,10 @@ body.nav_active nav {
   animation-delay: 1.75s;
   animation-fill-mode: forwards;
   top: 0;
+  right: 0;
   transform: translate(0, -100%);
 }
 
 .text-bottom p {
   font-size: 18px;
-  position: relative;
-  left: 500px;
 }
