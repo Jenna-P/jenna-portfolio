@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: redwing;
+  src: url(assets/Redwing-Medium.otf);
+}
+
 ul {
   list-style-type: none;
 }
@@ -30,10 +35,10 @@ a {
   top: 40px;
   left: 70px;
 }
-
+/* "Bebas Neue", cursive; */
 h1.title {
-  font-family: "Bebas Neue", cursive;
-  font-size: 90px;
+  font-family: redwing;
+  font-size: 70px;
   color: rgb(84, 83, 83);
   opacity: 0;
   transform: translateX(-100%);
@@ -162,7 +167,7 @@ body.nav_active nav {
 }
 .animated-title {
   color: #222;
-  font-family: "Bebas Neue", cursive;
+  font-family: redwing;
   height: 90vmin;
   left: 50%;
   position: absolute;
