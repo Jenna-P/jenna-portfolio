@@ -266,6 +266,88 @@ body.nav_active nav {
   transform: translateX(0);
 }
 
+/* icons */
+.icon-wrapper {
+  width: 100vw;
+  display: flex;
+  position: absolute;
+  bottom: 70px;
+  left: 40%;
+}
+
+.icon-wrapper .icons {
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.icon-wrapper a {
+  font-size: 40px;
+  position: relative;
+  top: 5px;
+  color: rgb(163, 166, 171);
+  cursor: pointer;
+}
+
+.icon-wrapper .icons .tooltip {
+  width: 95px;
+  position: absolute;
+  top: 0px;
+  background: #fff;
+  font-size: 15px;
+  padding: 10px 13px;
+  border-radius: 25px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.icon-wrapper .icons:hover .tooltip {
+  top: -50px;
+  opacity: 1;
+  pointer-events: auto;
+  color: #fff;
+}
+
+.icon-wrapper .icons .tooltip:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: #fff;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.icon-github {
+  text-align: center;
+}
+
+.icon-wrapper .icon-linked:hover .tooltip,
+.icon-wrapper .icon-linked:hover .tooltip:before {
+  background: #2867b2;
+}
+.icon-wrapper .icon-linked a:hover {
+  color: #2867b2;
+}
+
+.icon-wrapper .icon-github:hover .tooltip,
+.icon-wrapper .icon-github:hover .tooltip:before {
+  background: #333;
+}
+.icon-wrapper .icon-github a:hover {
+  color: #333;
+}
+
 @media screen and (max-width: 767px) {
   .about-wrap {
     display: flex;
