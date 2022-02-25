@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: redwing;
-  src: url(assets/Redwing-Medium.otf);
+  src: url(assets/font/Redwing-Medium.otf);
 }
 
 ul {
@@ -35,7 +35,7 @@ a {
   top: 40px;
   left: 70px;
 }
-/* "Bebas Neue", cursive; */
+
 h1.title {
   font-family: redwing;
   font-size: 70px;
@@ -217,4 +217,55 @@ body.nav_active nav {
 
 .text-bottom p {
   font-size: 18px;
+}
+
+/* opacity: 0;
+  transform: translateX(-100%);
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.5s;
+}
+
+.section.active h1.title {
+  opacity: 1;
+  transform: translateX(0);
+} */
+
+/* about me page */
+.about-wrap {
+  display: flex;
+  position: absolute;
+  left: 20px;
+  top: 20%;
+}
+
+.about-wrap .from-left {
+  width: 50%;
+  margin-right: 30px;
+  position: relative;
+  top: 100px;
+  right: 50px;
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 0.3s ease-in-out;
+  transition-delay: 1.5s;
+}
+
+.section.active .from-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.about-wrap .from-right {
+  width: 400px;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.3s ease-in-out;
+  transition-delay: 1s;
+}
+
+.section.active .from-right {
+  opacity: 1;
+  transform: translateX(0);
 }
