@@ -4,7 +4,7 @@ new fullpage('#fullpage',{
     // licenseKey: '',
     navigation: true,
     anchors:['Num0', 'Num1', 'Num2', 'Num3'],
-    responsiveHeight: 310,
+    responsiveHeight: 600
     
 })
 
