@@ -3,7 +3,7 @@ new fullpage('#fullpage',{
     scrollHorizontally:true,
     // licenseKey: '',
     navigation: true,
-    anchors:['Landing', 'About', 'Projects', 'Contact'],
+    anchors:['Home', 'About', 'Projects', 'Contact'],
     responsiveHeight: 600
     
 })

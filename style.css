@@ -4,9 +4,13 @@
   box-sizing: border-box;
 }
 
-@font-face {
+/* @font-face {
   font-family: redwing;
   src: url(assets/font/Redwing-Medium.otf);
+} */
+@font-face {
+  font-family: protique;
+  src: url(assets/font/ProtiqueBlack.otf);
 }
 
 ul {
@@ -28,16 +32,12 @@ a {
 
 .inner {
   height: 100%;
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  position: relative;
-  top: 40px;
-  left: 70px;
+  max-width: 1900px;
+  margin: 50px;
 }
 
 h1.title {
-  font-family: redwing;
+  font-family: protique;
   font-size: 70px;
   color: rgb(84, 83, 83);
   opacity: 0;
@@ -66,7 +66,7 @@ h1.title {
 
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
-  background-color: rgb(225, 222, 222);
+  background-color: rgb(163, 166, 171);
 }
 
 /* hamburger menu design */
@@ -90,7 +90,7 @@ h1.title {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #fff;
+  background-color: rgb(163, 166, 171);
   transition: all 0.3s ease-in-out;
 }
 
@@ -135,6 +135,7 @@ nav ul li {
   margin-right: 20px;
 }
 nav ul li a {
+  font-family: protique;
   color: rgba(50, 50, 50, 0.664);
 }
 
@@ -167,11 +168,11 @@ body.nav_active nav {
 }
 .animated-title {
   color: #222;
-  font-family: redwing;
+  font-family: Protique;
   height: 90vmin;
   left: 50%;
   position: absolute;
-  top: 50%;
+  top: 60%;
   transform: translate(-50%, -50%);
   width: 90vmin;
 }
@@ -182,8 +183,8 @@ body.nav_active nav {
   width: 100%;
 }
 .animated-title > div div {
-  font-size: 12vmin;
-  padding: 2vmin 0;
+  font-size: 17vmin;
+  padding: 5px 0;
   position: absolute;
 }
 .animated-title > div div span {
@@ -216,33 +217,64 @@ body.nav_active nav {
 }
 
 .text-bottom p {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 /* about me page */
-.about-wrap {
+.content {
   width: 100%;
-  max-width: 1000px;
-  margin: auto;
-  display: flex;
-  position: absolute;
-  top: 100px;
-  left: 20px;
-  justify-content: center;
-  align-items: center;
+  max-width: 1900px;
 }
 
-.about-wrap .from-left {
+.content-section {
+  width: 80%;
+  display: block;
+  margin: auto;
+  padding-top: 150px;
+}
+
+.content-section h3 {
+  margin-top: 20px;
+  font-size: 25px;
+  font-family: protique;
+}
+
+.content-section {
   width: 50%;
-  margin-right: 50px;
+  float: left;
+}
+
+.content-section .from-left .button a {
+  background-color: #3d3d3d;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 20px;
+  font-family: protique;
+  letter-spacing: 1.5px;
   position: relative;
   top: 20px;
+}
+
+.content-section .from-left .button a:hover {
+  background-color: #fff;
+  color: #3d3d3d;
+}
+
+.img-section {
+  float: right;
+  width: 45%;
+  padding-top: 70px;
+}
+
+.content-section .from-left {
+  margin-top: 10px;
   font-size: 18px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: protique;
+  line-height: 1.5;
   opacity: 0;
   transform: translateX(-100%);
   transition: all 0.3s ease-in-out;
-  transition-delay: 1.3s;
+  transition-delay: 0.7s;
 }
 
 .section.active .from-left {
@@ -250,15 +282,16 @@ body.nav_active nav {
   transform: translateX(0);
 }
 
-.about-wrap .from-right {
+.img-section .from-right {
   border-radius: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: 5px solid #f1ebf1;
-  width: 400px;
+  width: 100%;
+  height: auto;
   opacity: 0;
   transform: translateX(100%);
   transition: all 0.3s ease-in-out;
-  transition-delay: 0.8s;
+  transition-delay: 0.7s;
 }
 
 .section.active .from-right {
@@ -268,11 +301,10 @@ body.nav_active nav {
 
 /* icons */
 .icon-wrapper {
-  width: 100vw;
-  display: flex;
   position: absolute;
-  bottom: 70px;
-  left: 40%;
+  display: flex;
+  bottom: 3%;
+  right: 3%;
 }
 
 .icon-wrapper .icons {
@@ -348,22 +380,37 @@ body.nav_active nav {
   color: #333;
 }
 
-@media screen and (max-width: 767px) {
-  .about-wrap {
+@media screen and (max-width: 768px) {
+  .content {
     display: flex;
     flex-direction: column-reverse;
   }
-  .about-wrap .from-left {
-    width: 300px;
+  .title-wrapper .title {
+    position: absolute;
+    top: 7%;
+    text-align: center;
+  }
+  .content-section {
+    width: 80%;
+    margin: auto;
+    float: none;
+  }
+
+  .img-section {
+    float: none;
+    position: relative;
+    top: 120px;
+  }
+
+  .from-left {
     font-size: 15px;
     position: relative;
-    left: -15%;
+    top: 50%;
   }
-  .about-wrap .from-right {
-    width: 300px;
-    height: 200px;
-    position: relative;
-    left: -20%;
+
+  .img-section .from-right {
+    width: 400px;
+    height: 300px;
   }
 
   h1.title {
