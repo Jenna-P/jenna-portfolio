@@ -240,16 +240,15 @@ body.nav_active nav {
 
 .about-wrap .from-left {
   width: 50%;
-  margin-right: 30px;
+  margin-right: 50px;
   position: relative;
   top: 100px;
-  right: 50px;
   font-size: 18px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   opacity: 0;
   transform: translateX(-100%);
   transition: all 0.3s ease-in-out;
-  transition-delay: 1.5s;
+  transition-delay: 1.3s;
 }
 
 .section.active .from-left {
@@ -258,14 +257,41 @@ body.nav_active nav {
 }
 
 .about-wrap .from-right {
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 5px solid #f1ebf1;
   width: 400px;
   opacity: 0;
   transform: translateX(100%);
   transition: all 0.3s ease-in-out;
-  transition-delay: 1s;
+  transition-delay: 0.8s;
 }
 
 .section.active .from-right {
   opacity: 1;
   transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+  /* .fp-auto-height.fp-section,
+  .fp-auto-height .fp-slide,
+  .fp-auto-height .fp-tableCell {
+    height: auto !important;
+  } */
+
+  .about-wrap {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .about-wrap .from-left {
+    width: 300px;
+    position: relative;
+    top: 20px;
+    font-size: 15px;
+  }
+  .about-wrap .from-right {
+    width: 300px;
+    height: 200px;
+  }
 }
