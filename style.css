@@ -274,7 +274,7 @@ body.nav_active nav {
   opacity: 0;
   transform: translateX(-100%);
   transition: all 0.3s ease-in-out;
-  transition-delay: 0.7s;
+  transition-delay: 1s;
 }
 
 .section.active .from-left {
@@ -286,12 +286,12 @@ body.nav_active nav {
   border-radius: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: 5px solid #f1ebf1;
-  width: 100%;
+  width: 90%;
   height: auto;
   opacity: 0;
   transform: translateX(100%);
   transition: all 0.3s ease-in-out;
-  transition-delay: 0.7s;
+  transition-delay: 1s;
 }
 
 .section.active .from-right {
@@ -409,7 +409,7 @@ body.nav_active nav {
   }
 
   .img-section .from-right {
-    width: 400px;
+    width: 300px;
     height: 300px;
   }
 
