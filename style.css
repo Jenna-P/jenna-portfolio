@@ -244,19 +244,26 @@ body.nav_active nav {
   float: left;
 }
 
+.content-section .from-left .button {
+}
+
 .content-section .from-left .button a {
-  background-color: #3d3d3d;
+  background: linear-gradient(to top, #fff 50%, #3d3d3d 50%);
+  background-size: 100% 200%;
+  background-position: top;
   padding: 10px 20px;
-  color: #fff;
-  font-size: 20px;
-  font-family: protique;
-  letter-spacing: 1.5px;
   position: relative;
   top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: protique;
+  letter-spacing: 1.5px;
+  transition: all 0.5s ease-out;
+  color: #fff;
 }
 
 .content-section .from-left .button a:hover {
-  background-color: #fff;
+  background-position: bottom;
   color: #3d3d3d;
 }
 
@@ -273,7 +280,7 @@ body.nav_active nav {
   line-height: 1.5;
   opacity: 0;
   transform: translateX(-100%);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
   transition-delay: 1s;
 }
 
@@ -290,7 +297,7 @@ body.nav_active nav {
   height: auto;
   opacity: 0;
   transform: translateX(100%);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
   transition-delay: 1s;
 }
 
