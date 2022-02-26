@@ -41,14 +41,14 @@ h1.title {
   font-size: 70px;
   color: rgb(84, 83, 83);
   opacity: 0;
-  transform: translateX(-100%);
-  transition: all 0.3s ease-in-out;
-  transition-delay: 0.5s;
+  transform: translateY(100%);
+  transition: all 0.5s ease-in-out;
+  transition-delay: 0.7s;
 }
 
 .section.active h1.title {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 #sec0 {
@@ -288,14 +288,14 @@ body.nav_active nav {
   font-family: protique;
   line-height: 1.5;
   opacity: 0;
-  transform: translateX(-100%);
-  transition: all 0.4s ease-in-out;
-  transition-delay: 1s;
+  transform: translateY(100%);
+  transition: all 0.5s ease-in-out;
+  transition-delay: 0.7s;
 }
 
 .section.active .from-left {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 .img-section .from-right {
@@ -306,8 +306,8 @@ body.nav_active nav {
   height: auto;
   opacity: 0;
   transform: translateX(100%);
-  transition: all 0.4s ease-in-out;
-  transition-delay: 1s;
+  transition: all 0.5s ease-in-out;
+  transition-delay: 0.7s;
 }
 
 .section.active .from-right {
