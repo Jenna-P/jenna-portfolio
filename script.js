@@ -32,4 +32,22 @@ const horizontalIndicator = (e) => {
       horizontalIndicator(e.currentTarget)
     )
   );
+   
+  let cardOne = document.getElementById("card1");
+  let cardTwo = document.getElementById("card2");
+  let cardThree = document.getElementById("card3");
+
+  const mediaQuery = window.matchMedia('(max-width: 768px)');
+  
+  if (mediaQuery.matches) {
+    cardOne.classList.add("slide"); 
+    cardTwo.classList.add("slide"); 
+    cardThree.classList.add("slide"); 
+  } else {
+    cardOne.classList.remove("slide");
+    cardTwo.classList.remove("slide");
+    cardThree.classList.remove("slide");
+  }
+  
+  
   
