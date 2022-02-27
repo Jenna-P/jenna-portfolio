@@ -21,6 +21,12 @@ a {
   text-decoration: none;
 }
 
+h1.title {
+  font-family: protique;
+  font-size: 70px;
+  color: rgb(84, 83, 83);
+}
+
 .landing_inner {
   height: 100%;
   max-width: 1200px;
@@ -34,21 +40,6 @@ a {
   height: 100%;
   max-width: 1900px;
   margin: 50px;
-}
-
-h1.title {
-  font-family: protique;
-  font-size: 70px;
-  color: rgb(84, 83, 83);
-  opacity: 0;
-  transform: translateY(100%);
-  transition: all 0.5s ease-in-out;
-  transition-delay: 0.7s;
-}
-
-.section.active h1.title {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 #sec0 {
@@ -67,6 +58,87 @@ h1.title {
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
   background-color: rgb(163, 166, 171);
+}
+
+/* icons */
+.icon-wrapper {
+  position: absolute;
+  display: flex;
+  bottom: 3%;
+  right: 3%;
+}
+
+.icon-wrapper .icons {
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.icon-wrapper a {
+  font-size: 40px;
+  position: relative;
+  top: 5px;
+  color: rgb(163, 166, 171);
+  cursor: pointer;
+}
+
+.icon-wrapper .icons .tooltip {
+  width: 95px;
+  position: absolute;
+  top: 0px;
+  background: #fff;
+  font-size: 15px;
+  padding: 10px 13px;
+  border-radius: 25px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.icon-wrapper .icons:hover .tooltip {
+  top: -50px;
+  opacity: 1;
+  pointer-events: auto;
+  color: #fff;
+}
+
+.icon-wrapper .icons .tooltip:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: #fff;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.icon-github {
+  text-align: center;
+}
+
+.icon-wrapper .icon-linked:hover .tooltip,
+.icon-wrapper .icon-linked:hover .tooltip:before {
+  background: #2867b2;
+}
+.icon-wrapper .icon-linked a:hover {
+  color: #2867b2;
+}
+
+.icon-wrapper .icon-github:hover .tooltip,
+.icon-wrapper .icon-github:hover .tooltip:before {
+  background: #333;
+}
+.icon-wrapper .icon-github a:hover {
+  color: #333;
 }
 
 /* hamburger menu design */
@@ -242,6 +314,17 @@ body.nav_active nav {
   align-items: center;
 }
 
+h1.title-about {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.5s ease-in-out;
+  transition-delay: 0.7s;
+}
+
+.section.active h1.title-about {
+  opacity: 1;
+  transform: translateY(0);
+}
 .content-section h3 {
   margin-top: 20px;
   font-size: 25px;
@@ -315,93 +398,98 @@ body.nav_active nav {
   transform: translateX(0);
 }
 
-/* icons */
-.icon-wrapper {
-  position: absolute;
+/* project page */
+h1.title-project {
   display: flex;
-  bottom: 3%;
-  right: 3%;
-}
-
-.icon-wrapper .icons {
-  margin: 0 10px;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
-  position: relative;
-  z-index: 2;
-  cursor: pointer;
+  align-items: center;
+  padding-top: 10%;
 }
 
-.icon-wrapper a {
-  font-size: 40px;
-  position: relative;
-  top: 5px;
-  color: rgb(163, 166, 171);
-  cursor: pointer;
-}
-
-.icon-wrapper .icons .tooltip {
-  width: 95px;
-  position: absolute;
-  top: 0px;
-  background: #fff;
-  font-size: 15px;
-  padding: 10px 13px;
-  border-radius: 25px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+.title-project {
   opacity: 0;
-  pointer-events: none;
-  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: translateY(100%);
+  transition: all 0.5s ease-in-out;
+  transition-delay: 0.7s;
 }
 
-.icon-wrapper .icons:hover .tooltip {
-  top: -50px;
+.section.active .title-project {
   opacity: 1;
-  pointer-events: auto;
-  color: #fff;
+  transform: translateY(0);
 }
 
-.icon-wrapper .icons .tooltip:before {
-  position: absolute;
-  content: "";
-  height: 15px;
-  width: 15px;
-  background: #fff;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%) rotate(45deg);
-  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+.cards-wrapper {
+  width: auto;
+  height: 450px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.5s ease-in-out;
+  transition-delay: 1s;
 }
 
-.icon-github {
+.section.active .cards-wrapper {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card {
+  height: 100%;
+  border-radius: 25px;
+  width: 320px;
+  border: 1px solid lightgray;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card img {
+  width: 318px;
+  height: 180px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+}
+
+.card .card-body {
   text-align: center;
+  margin: 15px 8px;
+  font-family: protique;
 }
 
-.icon-wrapper .icon-linked:hover .tooltip,
-.icon-wrapper .icon-linked:hover .tooltip:before {
-  background: #2867b2;
-}
-.icon-wrapper .icon-linked a:hover {
-  color: #2867b2;
+.card-body h3 {
+  font-size: 25px;
 }
 
-.icon-wrapper .icon-github:hover .tooltip,
-.icon-wrapper .icon-github:hover .tooltip:before {
-  background: #333;
+.card-body p {
+  font-size: 17px;
+  margin-top: 10px;
 }
-.icon-wrapper .icon-github a:hover {
-  color: #333;
+
+.card .card-btn {
+  position: absolute;
+  bottom: 10%;
+  left: 20%;
+}
+
+.card .card-btn a {
+  font-family: protique;
+  letter-spacing: 2;
+  font-size: 25px;
+  background-color: #848484;
+  color: #fff;
+  padding: 7px 12px;
+  margin: 20px 10px;
+  text-transform: lowercase;
+  border-radius: 10px;
+}
+#contact {
+  height: 400px;
 }
 
 #footer {
   height: 150px;
-}
-
-#contact {
-  height: 400px;
 }
 
 @media screen and (max-width: 768px) {
@@ -409,7 +497,7 @@ body.nav_active nav {
     display: flex;
     flex-direction: column-reverse;
   }
-  .title-wrapper .title {
+  .title-wrapper .title-about {
     position: absolute;
     top: 17%;
     text-align: center;
@@ -429,7 +517,7 @@ body.nav_active nav {
   .from-left {
     font-size: 15px;
     position: relative;
-    top: 17%;
+    top: 23%;
   }
 
   .img-section .from-right {
@@ -439,5 +527,12 @@ body.nav_active nav {
 
   h1.title {
     font-size: 50px;
+  }
+
+  .cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
