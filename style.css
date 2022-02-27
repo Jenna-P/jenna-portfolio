@@ -513,6 +513,7 @@ h1.title-project {
   }
   .title-wrapper .title-about {
     text-align: center;
+    padding-top: 10px;
   }
   .content-section {
     width: 80%;
