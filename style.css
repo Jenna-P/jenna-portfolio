@@ -500,31 +500,6 @@ h1.title-project {
   cursor: pointer;
 }
 
-/* .slider_wrap .slide {
-  height: 100%;
-} */
-
-.slider_wrap .fp-tableCell {
-  display: block;
-}
-
-.fp-controlArrow.fp-next {
-  right: -40px;
-  border-width: 19.5px 0 19.5px 18px;
-  opacity: 0;
-}
-
-.fp-controlArrow.fp-prev {
-  left: -40px;
-  border-width: 19.5px 18px 19.5px 0;
-  opacity: 0;
-}
-
-#fp-nav ul li a span,
-.fp-slidesNav ul li a span {
-  background-color: #fff;
-}
-
 #contact-section {
   height: 400px;
 }
@@ -573,33 +548,8 @@ h1.title-project {
     font-size: 50px;
   }
 
-  .slider_wrap {
-    width: 330px;
-    height: 400px;
-    position: relative;
-  }
-  .slider_wrap .slide {
-    height: 100%;
-  }
-
-  .slider_wrap .fp-tableCell {
-    display: block;
-  }
-
-  .fp-controlArrow.fp-next {
-    right: -40px;
-    border-width: 19.5px 0 19.5px 18px;
-    opacity: 1;
-  }
-
-  .fp-controlArrow.fp-prev {
-    left: -40px;
-    border-width: 19.5px 18px 19.5px 0;
-    opacity: 1;
-  }
-
-  #fp-nav ul li a span,
-  .fp-slidesNav ul li a span {
-    background-color: #fff;
+  .cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
   }
 }

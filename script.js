@@ -4,10 +4,12 @@ new fullpage('#fullpage',{
     // licenseKey: '',
     navigation: true,
     anchors:['Home', 'About', 'Projects', 'Contact'],
-    responsiveHeight: 410,
-    
-    
+    responsivewidth: 768,
+   
 })
+
+if (screen && screen.width > 768) { document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>'); } 
+//$(document).ready(function() { $('#fullpage').fullpage(); });
 
 //navigation menu click event
 const body = document.querySelector('body');
@@ -33,21 +35,5 @@ const horizontalIndicator = (e) => {
     )
   );
    
-  let cardOne = document.getElementById("card1");
-  let cardTwo = document.getElementById("card2");
-  let cardThree = document.getElementById("card3");
-
-  const mediaQuery = window.matchMedia('(max-width: 768px)');
-  
-  if (mediaQuery.matches) {
-    cardOne.classList.add("slide"); 
-    cardTwo.classList.add("slide"); 
-    cardThree.classList.add("slide"); 
-  } else {
-    cardOne.classList.remove("slide");
-    cardTwo.classList.remove("slide");
-    cardThree.classList.remove("slide");
-  }
-  
   
   
