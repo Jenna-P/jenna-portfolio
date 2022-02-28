@@ -81,4 +81,9 @@ const horizontalIndicator = (e) => {
   );
    
   
-  
+  // move to top
+  const topBtn = document.getElementById("top-btn");
+
+  topBtn.addEventListener("click", () => {
+    fullpage_api.moveTo('Home', 0);
+  })
