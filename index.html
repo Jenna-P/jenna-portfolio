@@ -7,7 +7,9 @@
     <title>CodeMyDream</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
     <script defer src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
     <!-- fullPage.js library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
   </head>
@@ -103,58 +105,89 @@
               <img src="assets/image/jenna-family.JPG" alt="my image" class="slide-in from-right" />
             </div>
       </section>
+
       <!-- Projects -->
-      <section id="sec2" class="section fp-auto-height-responsive">
+      <section id="sec2" class="section">
         <div class="inner">
           <h1 class="title title-project">Projects</h1>
+          <div class="slider-btn">
+            <button aria-label="Previous" class="glider-prev">«</button>
+            <button aria-label="Next" class="glider-next">»</button>
+          </div>
             <div class="cards-wrapper">
-            <!--card1-->
-             <div class="card" id="card1">
-              <div class="card-image">              
-                <img src="assets/image/project.jpg" alt="project image">
+              <div class="glider-contain">
+                <div class="glider">
+                  <div class="card">
+                    <div class="card-image">              
+                      <img src="assets/image/project.jpg" alt="project image">
+                    </div>
+                    <div class="card-body">
+                      <h3>Project 1</h3>
+                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, veritatis minima consequuntur voluptas animi numquam.</p>
+                    </div>
+                    <div class="card-btn">
+                      <a href="#">Demo</a>
+                      <a href="#">GitHub</a>
+                    </div> 
+                  </div>
+                  <div class="card">
+                    <div class="card-image">              
+                      <img src="assets/image/project.jpg" alt="project image">
+                    </div>
+                    <div class="card-body">
+                      <h3>Project 2</h3>
+                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, veritatis minima consequuntur voluptas animi numquam.</p>
+                    </div>
+                    <div class="card-btn">
+                      <a href="#">Demo</a>
+                      <a href="#">GitHub</a>
+                    </div> 
+                  </div>
+                  <div class="card">
+                    <div class="card-image">              
+                      <img src="assets/image/project.jpg" alt="project image">
+                    </div>
+                    <div class="card-body">
+                      <h3>Project 3</h3>
+                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, veritatis minima consequuntur voluptas animi numquam.</p>
+                    </div>
+                    <div class="card-btn">
+                      <a href="#">Demo</a>
+                      <a href="#">GitHub</a>
+                    </div> 
+                  </div>
+                  <div class="card">
+                    <div class="card-image">              
+                      <img src="assets/image/project.jpg" alt="project image">
+                    </div>
+                    <div class="card-body">
+                      <h3>Project 4</h3>
+                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, veritatis minima consequuntur voluptas animi numquam.</p>
+                    </div>
+                    <div class="card-btn">
+                      <a href="#">Demo</a>
+                      <a href="#">GitHub</a>
+                    </div> 
+                  </div>
+                </div>
+              
+                
+                
+                
               </div>
-              <div class="card-body">
-              <h3>Project 1</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, veritatis minima consequuntur voluptas animi numquam.</p>
-              </div>
-              <div class="card-btn">
-               <a href="#">Demo</a>
-               <a href="#">GitHub</a>
-              </div>
-            </div>
-            <!--card2-->
-            <div class="card" id="card2">
-              <div class="card-image">              
-                <img src="assets/image/project.jpg" alt="project image">
-              </div>              
-            <div class="card-body">
-              <h3>Project 2</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, veritatis minima consequuntur voluptas animi numquam.</p>
-              </div>
-              <div class="card-btn">
-               <a href="#">Demo</a>
-               <a href="#">GitHub</a>
-              </div>
-            </div>
-            <!--card3-->
-            <div class="card" id="card3">
-              <div class="card-image">              
-                <img src="assets/image/project.jpg" alt="project image">
-              </div>              
-              <div class="card-body">
-              <h3>Project 3</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, veritatis minima consequuntur voluptas animi numquam.</p>
-              </div>
-              <div class="card-btn">
-               <a href="#">Demo</a>
-               <a href="#">GitHub</a>
-              </div>
-            </div> 
+
+                 
+
+                  
+
+              
+              
+            </div>   <!--card-wrapper -->
          </div> 
-        </div>    
+       
       </section>
       <!-- Contects -->
-      <section id="sec3" class="section fp-auto-height">
+      <section id="sec3" class="section">
         <div id="contact-section" class="inner">
           <div class="cantact-wrapper">
           <h1 class="title title-contact">Contact</h1>
@@ -175,6 +208,7 @@
 
       
     </div>
-  
+
+   
   </body>
 </html>

@@ -41,18 +41,18 @@ h1.title {
   max-width: 1900px;
   margin: 50px;
 }
-
+/* background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
 #sec0 {
-  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #f7f1f7 100%);
 }
 #sec1 {
-  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #f9ecf8 100%);
 }
 #sec2 {
-  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #f9ecf8 100%);
 }
 #sec3 {
-  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #f9ecf8 100%);
 }
 
 #fp-nav ul li a span,
@@ -339,9 +339,10 @@ h1.title-about {
 }
 
 .content-section .from-left .button a {
-  background: linear-gradient(to top, #fff 50%, #3d3d3d 50%);
+  background: linear-gradient(to top, #767676 50%, transparent 50%);
   background-size: 100% 200%;
   background-position: top;
+  border: 2px solid #767676;
   padding: 10px 20px;
   position: relative;
   top: 20px;
@@ -350,12 +351,12 @@ h1.title-about {
   font-family: protique;
   letter-spacing: 1.5px;
   transition: all 0.5s ease-out;
-  color: #fff;
+  color: #6a6969;
 }
 
 .content-section .from-left .button a:hover {
   background-position: bottom;
-  color: #3d3d3d;
+  color: #f6f5f6;
 }
 
 .img-section {
@@ -404,7 +405,7 @@ h1.title-project {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 5%;
+  padding-top: 3%;
 }
 
 .title-project {
@@ -422,11 +423,10 @@ h1.title-project {
 .cards-wrapper {
   width: auto;
   max-width: 1900px;
-  height: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 10px;
   opacity: 0;
   transform: translateY(100%);
   transition: all 0.5s ease-in-out;
@@ -439,11 +439,11 @@ h1.title-project {
 }
 
 .card {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
   border-radius: 25px;
-  width: 330px;
   border: 1px solid lightgray;
-  margin: 30px;
+  margin: 20px;
   position: relative;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: 0.5s ease;
@@ -451,7 +451,7 @@ h1.title-project {
 }
 
 .card:hover {
-  transform: scale(1.2);
+  transform: scale(1);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
 }
 
@@ -468,7 +468,7 @@ h1.title-project {
 
 .card .card-body {
   text-align: center;
-  margin: 15px 8px;
+  margin: 20px 8px;
   font-family: protique;
 }
 
@@ -478,30 +478,69 @@ h1.title-project {
 
 .card-body p {
   font-size: 17px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .card .card-btn {
-  position: absolute;
-  bottom: 10%;
-  left: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card .card-btn a {
+  background: linear-gradient(to top, #767676 50%, transparent 50%);
+  background-size: 100% 200%;
+  background-position: top;
   font-family: protique;
   letter-spacing: 2;
   font-size: 25px;
-  background-color: #848484;
-  color: #fff;
-  padding: 7px 12px;
+  border: 2px solid #6a6969;
+  color: #6a6969;
+  padding: 5px 10px;
   margin: 20px 10px;
-  text-transform: lowercase;
-  border-radius: 10px;
+  transition: all 0.5s ease-out;
   cursor: pointer;
 }
 
-#contact-section {
-  height: 400px;
+.card .card-btn a:hover {
+  background-position: bottom;
+  color: #fff;
+}
+
+.slider-btn {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 0px auto;
+  padding: 0px 20px;
+  position: relative;
+  top: 20px;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.5s ease-in-out;
+  transition-delay: 1s;
+}
+
+.section.active .slider-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slider-btn button {
+  position: static !important;
+  transform: translate(0, 0);
+  background-color: f3f3f3;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  transition: 0.5s ease;
+}
+
+.slider-btn button:hover {
+  transform: scale(1.2);
 }
 
 #footer {
@@ -548,8 +587,11 @@ h1.title-project {
     font-size: 50px;
   }
 
-  .cards-wrapper {
+  .card .card-btn {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .card .card-btn a {
+    margin-top: 5px;
   }
 }

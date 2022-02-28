@@ -1,15 +1,60 @@
 new fullpage('#fullpage',{
     autoScrolling:true,
     scrollHorizontally:true,
-    // licenseKey: '',
+     // licenseKey: '',
     navigation: true,
     anchors:['Home', 'About', 'Projects', 'Contact'],
-    responsivewidth: 768,
-   
+    responsivewidth: 768
+    
 })
 
-if (screen && screen.width > 768) { document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>'); } 
-//$(document).ready(function() { $('#fullpage').fullpage(); });
+new Glider(document.querySelector('.glider'), {
+  slidesToShow: 3,
+  slidesToScroll: 5,
+  draggable: true,
+  dots: '.dots',
+  arrows: {
+    prev: '.glider-prev',
+    next: '.glider-next'
+  },
+  responsive: [
+    {
+      // screens greater than >= 775px
+      breakpoint: 1200,
+      settings: {
+        // Set to `auto` and provide item width to adjust to viewport
+        slidesToShow: 4,
+        slidesToScroll: 2,
+        
+      }
+    },{
+      breakpoint: 900,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        
+      }
+    },
+    {
+      breakpoint: 500,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        
+      }
+    },
+    {
+      breakpoint: 300,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        
+      }
+    }
+
+  ]
+});
+
 
 //navigation menu click event
 const body = document.querySelector('body');
