@@ -225,7 +225,7 @@ body.nav_active nav {
   width: 0;
   border-radius: 3px;
   transition: 0.5s;
-  background-color: rgb(179, 197, 208);
+  background-color: rgb(210, 178, 205);
   top: 0;
 }
 
@@ -539,8 +539,49 @@ h1.title-project {
   transition: 0.5s ease;
 }
 
-.slider-btn button:hover {
-  transform: scale(1.2);
+/*contact page*/
+
+#contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-wrapper {
+  position: absolute;
+  top: 40%;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.5s ease-in-out;
+  transition-delay: 0.7s;
+}
+
+.section.active .contact-wrapper {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.email-button {
+  text-align: center;
+  margin-top: 20px;
+  height: 40px;
+}
+
+.email-button a {
+  font-family: protique;
+  font-size: 23px;
+  color: #6a6969;
+  background: linear-gradient(to top, #767676 50%, transparent 50%);
+  background-size: 100% 200%;
+  background-position: top;
+  border: 2px solid #767676;
+  padding: 7px;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+.email-button a:hover {
+  background-position: bottom;
+  color: #fff;
 }
 
 #footer {
