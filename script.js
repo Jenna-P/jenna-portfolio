@@ -1,11 +1,12 @@
+
 new fullpage('#fullpage',{
-    autoScrolling:true,
-    scrollHorizontally:true,
+    // autoScrolling:true,
+    // scrollHorizontally:true,
      // licenseKey: '',
     navigation: true,
     anchors:['Home', 'About', 'Projects', 'Contact'],
-    responsivewidth: 768
-    
+    responsivewidth: 768,
+   
 })
 
 new Glider(document.querySelector('.glider'), {
