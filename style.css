@@ -338,11 +338,16 @@ h1.title-about {
   margin-left: 20px;
 }
 
+.content-section p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .content-section .from-left .button a {
   background: linear-gradient(to top, #767676 50%, transparent 50%);
   background-size: 100% 200%;
   background-position: top;
   border: 2px solid #767676;
+  border-radius: 10px;
   padding: 10px 20px;
   position: relative;
   top: 20px;
@@ -421,7 +426,6 @@ h1.title-project {
 }
 
 .cards-wrapper {
-  width: auto;
   max-width: 1900px;
   display: flex;
   justify-content: center;
@@ -439,11 +443,13 @@ h1.title-project {
 }
 
 .card {
+  width: 100%;
   display: flex;
   flex-direction: column;
   border-radius: 25px;
   border: 1px solid lightgray;
   margin: 20px;
+  padding-top: 0px;
   position: relative;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: 0.5s ease;
@@ -467,18 +473,21 @@ h1.title-project {
 }
 
 .card .card-body {
+  height: 120px;
   text-align: center;
   margin: 20px 8px;
   font-family: protique;
 }
 
 .card-body h3 {
-  font-size: 25px;
+  font-size: 28px;
+  margin-bottom: 15px;
 }
 
 .card-body p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 17px;
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
 .card .card-btn {
@@ -495,6 +504,7 @@ h1.title-project {
   letter-spacing: 2;
   font-size: 20px;
   border: 2px solid #6a6969;
+  border-radius: 10px;
   color: #6a6969;
   padding: 5px 10px;
   margin: 20px 10px;
@@ -549,10 +559,9 @@ h1.title-project {
 .contact-wrapper {
   position: absolute;
   top: 40%;
-  opacity: 0;
   transform: translateY(100%);
   transition: all 0.5s ease-in-out;
-  transition-delay: 0.7s;
+  transition-delay: 0.3s;
 }
 
 .section.active .contact-wrapper {
@@ -574,6 +583,7 @@ h1.title-project {
   background-size: 100% 200%;
   background-position: top;
   border: 2px solid #767676;
+  border-radius: 10px;
   padding: 7px;
   transition: all 0.5s ease-out;
   cursor: pointer;
