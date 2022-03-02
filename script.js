@@ -6,7 +6,7 @@ new fullpage('#fullpage',{
     navigation: true,
     anchors:['Home', 'About', 'Projects', 'Contact'],
     scrollOverflow: true,
-    responsiveWidth: 1025,
+    responsiveWidth: 900,
     responsiveHeight: 641,
     afterResponsive: function(isResponsive) {
       if (isResponsive) {

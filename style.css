@@ -651,18 +651,15 @@ h1.title-project {
     top: 10%;
   }
 
-  .title-wrapper .title-about {
-    position: relative;
-  }
   .img-section {
     float: none;
+    opacity: 0;
   }
-  .img-section .from-right {
+  /* .img-section .from-right {
     position: relative;
     top: -250px;
     left: 90px;
-  }
-
+  } */
   h1.title {
     font-size: 50px;
   }
