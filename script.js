@@ -5,7 +5,14 @@ new fullpage('#fullpage',{
      // licenseKey: '',
     navigation: true,
     anchors:['Home', 'About', 'Projects', 'Contact'],
-    responsivewidth: 768,
+    scrollOverflow: true,
+    responsiveWidth: 1025,
+    responsiveHeight: 641,
+    afterResponsive: function(isResponsive) {
+      if (isResponsive) {
+          console.log("I'm in responsive mode");
+      }
+  }
    
 })
 
