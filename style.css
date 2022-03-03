@@ -664,9 +664,15 @@ h1.title-project {
     font-size: 50px;
   }
 
+  .card-body p {
+    padding-top: 0px;
+  }
+
   .card .card-btn {
     display: flex;
     flex-direction: column;
+    position: relative;
+    top: 10px;
   }
   .card .card-btn a:first-child {
     margin-top: 20px 10px 0px 10px;

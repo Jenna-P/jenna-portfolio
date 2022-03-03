@@ -5,8 +5,8 @@ new fullpage('#fullpage',{
      // licenseKey: '',
     navigation: true,
     anchors:['Home', 'About', 'Projects', 'Contact'],
-    scrollOverflow: true,
-    responsiveWidth: 900,
+    //scrollOverflow: true,
+    responsiveWidth: 600,
     responsiveHeight: 641,
     afterResponsive: function(isResponsive) {
       if (isResponsive) {
@@ -27,7 +27,7 @@ new Glider(document.querySelector('.glider'), {
   },
   responsive: [
     {
-      // screens greater than >= 775px
+      // screens greater than >= 1500px
       breakpoint: 1500,
       settings: {
         // Set to `auto` and provide item width to adjust to viewport
@@ -44,7 +44,7 @@ new Glider(document.querySelector('.glider'), {
       }
     },
     {
-      breakpoint: 500,
+      breakpoint: 300,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,
