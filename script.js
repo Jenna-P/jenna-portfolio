@@ -1,97 +1,91 @@
 
-new fullpage('#fullpage',{
-    // autoScrolling:true,
-    // scrollHorizontally:true,
-     // licenseKey: '',
-    navigation: true,
-    anchors:['Home', 'About', 'Projects', 'Contact'],
-    //scrollOverflow: true,
-    responsiveWidth: 600,
-    responsiveHeight: 641,
-    afterResponsive: function(isResponsive) {
-      if (isResponsive) {
-          console.log("I'm in responsive mode");
-      }
-  }
-   
-})
-
-new Glider(document.querySelector('.glider'), {
-  slidesToShow: 3,
-  slidesToScroll: 5,
-  draggable: true,
-  dots: '.dots',
-  arrows: {
-    prev: '.glider-prev',
-    next: '.glider-next'
-  },
-  responsive: [
-    {
-      // screens greater than >= 1500px
-      breakpoint: 1500,
-      settings: {
-        // Set to `auto` and provide item width to adjust to viewport
-        slidesToShow: 4,
-        slidesToScroll: 2,
-        
-      }
-    },{
-      breakpoint: 900,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        
-      }
-    },
-    {
-      breakpoint: 500,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        
-      }
-    },
-    {
-      breakpoint: 0,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        
-      }
-    }
-
-  ]
-});
-
-
 //navigation menu click event
-const body = document.querySelector('body');
-const nav_icon = document.querySelector('#nav_icon');
+// const body = document.querySelector('body');
+// const nav_icon = document.querySelector('#nav_icon');
 
-nav_icon.addEventListener('click', () => {
-    body.classList.toggle('nav_active');
-});
+// nav_icon.addEventListener('click', () => {
+//     body.classList.toggle('nav_active');
+// });
+
+//Navbar on Scroll 
+ var navbar = document.querySelector(".navbar");
+ // when the scroll is higher than 20 viewport height, add the sticky classs to the tag with a class navbar 
+ window.onscroll = () =>{
+ this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+}
 
 //menu click effect
 let underline = document.getElementById("underline");
-let menus = document.querySelectorAll("nav a");
+let navLink = document.querySelectorAll(".nav-link");
 
 const horizontalIndicator = (e) => {
     underline.style.left = e.offsetLeft + "px";
     underline.style.width = e.offsetWidth + "px";
     underline.style.top = e.offsetTop + e.offsetHeight + "px";
   }
-  
-  menus.forEach((menu) =>
-    menu.addEventListener("click", (e) =>
-      horizontalIndicator(e.currentTarget)
-    )
-  );
-   
+
+   // closing menu when link is clicked
+      function linkAction()
+      {
+          const navMenu = document.querySelector(".menu");
+          navMenu.classList.remove("active")
+      }
+      navLink.forEach(n => n.addEventListener("click", linkAction))
+
+      // Scroll Section Active
+      const Section= document.querySelectorAll('section[id]')
+      const contact = document.querySelector('.contact-wrapper');
+      function scrollActive()
+      {
+          const scrollY = window.pageYOffset
+          Section.forEach(current => {
+              const sectionHeight = current.offsetHeight;
+              const sectionTop = current.offsetTop - 70;
+              sectionId = current.getAttribute('id');
+              const scroll_target = document.querySelector('.links a[href*=' + sectionId + ']');
+              console.log(scrollY);
+              if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight)
+              {
+                horizontalIndicator(scroll_target);
+                       
+              }
+              
+              if(scrollY >= 2087.5){
+                contact.classList.add('active');
+              } else {
+                contact.classList.remove('active');
+              }
+
+          })
+      }
+      window.addEventListener('scroll', scrollActive)
+
+   //skills animation
+   const skills_wrap = document.querySelector(".about-skills"),
+   skills_bar = document.querySelectorAll(".progress-line");
+   window.addEventListener("scroll", () => {
+       skillsEffect();
+   })
+   // every time we scroll checking, we exceeded the about-skills or not
+   function checkScroll(el)
+   {
+       //getting the top position of about-skills relative to view port, in other words we need to get
+       // amount of pixels between about-skills and the top edge of the window.
+       let rect = el.getBoundingClientRect();
+       // after knowing the amount of pixels between the top edge of about skills and the top edge of window
+       // now we will check we exceeded the bottom edge of about skills or not
+       if(window.innerHeight >= rect.top + el.offsetHeight) return true;
+       return false;
+   }
+   function skillsEffect()
+   {
+       if(!checkScroll(skills_wrap)) return;
+       skills_bar.forEach((skill) => (skill.style.width = skill.dataset.progress));
+   }
   
   // move to top
-  const topBtn = document.getElementById("top-btn");
+  // const topBtn = document.getElementById("top-btn");
 
-  topBtn.addEventListener("click", () => {
-    fullpage_api.moveTo('Home', 0);
-  })
+  // topBtn.addEventListener("click", () => {
+  //   fullpage_api.moveTo('Home', 0);
+  // })
