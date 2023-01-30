@@ -6,6 +6,6 @@
 - JavaScript
 - HTML
 - CSS
-- fullPage.js
+
 
 [My site!](https://www.codemydream.dk)
