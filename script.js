@@ -1,22 +1,27 @@
 
-//navigation menu click event
-// const body = document.querySelector('body');
-// const nav_icon = document.querySelector('#nav_icon');
+const navMenu = document.querySelector(".menu");
+const navToggle = document.querySelector("#nav_icon");
+const body = document.querySelector('body');
 
-// nav_icon.addEventListener('click', () => {
-//     body.classList.toggle('nav_active');
-// });
+      if(navToggle)
+      {
+          navToggle.addEventListener("click", () =>
+          {
+              navMenu.classList.toggle("active");
+              body.classList.toggle('nav_active');
+          })
+      }
 
 //Navbar on Scroll 
- var navbar = document.querySelector(".navbar");
+const navbar = document.querySelector(".navbar");
  // when the scroll is higher than 20 viewport height, add the sticky classs to the tag with a class navbar 
  window.onscroll = () =>{
  this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
 }
 
 //menu click effect
-let underline = document.getElementById("underline");
-let navLink = document.querySelectorAll(".nav-link");
+const underline = document.getElementById("underline");
+const navLink = document.querySelectorAll(".nav-link");
 
 const horizontalIndicator = (e) => {
     underline.style.left = e.offsetLeft + "px";
@@ -24,40 +29,41 @@ const horizontalIndicator = (e) => {
     underline.style.top = e.offsetTop + e.offsetHeight + "px";
   }
 
-   // closing menu when link is clicked
-      function linkAction()
-      {
-          const navMenu = document.querySelector(".menu");
-          navMenu.classList.remove("active")
-      }
-      navLink.forEach(n => n.addEventListener("click", linkAction))
+// closing menu when link is clicked
+  function linkAction()
+  {
+      const navMenu = document.querySelector(".menu");
+      navMenu.classList.remove("active");
+      body.classList.remove('nav_active');
+  }
+  navLink.forEach(n => n.addEventListener("click", linkAction))
 
-      // Scroll Section Active
-      const Section= document.querySelectorAll('section[id]')
-      const contact = document.querySelector('.contact-wrapper');
-      function scrollActive()
-      {
-          const scrollY = window.pageYOffset
-          Section.forEach(current => {
-              const sectionHeight = current.offsetHeight;
-              const sectionTop = current.offsetTop - 70;
-              sectionId = current.getAttribute('id');
-              const scroll_target = document.querySelector('.links a[href*=' + sectionId + ']');
-              console.log(scrollY);
-              if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight)
-              {
-                horizontalIndicator(scroll_target);
-                       
-              }
-              
-              if(scrollY >= 2087.5){
-                contact.classList.add('active');
-              } else {
-                contact.classList.remove('active');
-              }
+  // Scroll Section Active
+  const Section= document.querySelectorAll('section[id]')
+  const contact = document.querySelector('.contact-wrapper');
+  function scrollActive()
+  {
+      const scrollY = window.pageYOffset
+      Section.forEach(current => {
+          const sectionHeight = current.offsetHeight;
+          const sectionTop = current.offsetTop - 70;
+          sectionId = current.getAttribute('id');
+          const scroll_target = document.querySelector('.links a[href*=' + sectionId + ']');
+          console.log(scrollY);
+          if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight)
+          {
+            horizontalIndicator(scroll_target);
+                    
+          }
+          
+          if(scrollY >= 2087.5){
+            contact.classList.add('active');
+          } else {
+            contact.classList.remove('active');
+          }
 
-          })
-      }
+      })
+  }
       window.addEventListener('scroll', scrollActive)
 
    //skills animation
@@ -83,9 +89,3 @@ const horizontalIndicator = (e) => {
        skills_bar.forEach((skill) => (skill.style.width = skill.dataset.progress));
    }
   
-  // move to top
-  // const topBtn = document.getElementById("top-btn");
-
-  // topBtn.addEventListener("click", () => {
-  //   fullpage_api.moveTo('Home', 0);
-  // })
