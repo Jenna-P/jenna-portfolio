@@ -168,6 +168,10 @@ nav ul li a {
   left: 3%;
 }
 
+.icon-wrapper.active {
+  z-index: 999;
+}
+
 .icon-wrapper .icons {
   margin: 0 10px;
   display: flex;
@@ -175,7 +179,6 @@ nav ul li a {
   justify-content: center;
   flex-direction: column;
   position: relative;
-  z-index: 2;
   cursor: pointer;
 }
 
@@ -637,7 +640,6 @@ nav ul li a {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   font-size: 28px;
-  /* letter-spacing: 0.1em; */
   text-align: left;
   color: var(--main-color);
   cursor: pointer;

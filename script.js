@@ -1,7 +1,8 @@
 
 const navMenu = document.querySelector(".menu");
 const navToggle = document.querySelector("#nav_icon");
-const body = document.querySelector('body');
+const body = document.querySelector("body");
+const icons = document.querySelector(".icon-wrapper");
 
       if(navToggle)
       {
@@ -49,17 +50,15 @@ const horizontalIndicator = (e) => {
           const sectionTop = current.offsetTop - 70;
           sectionId = current.getAttribute('id');
           const scroll_target = document.querySelector('.links a[href*=' + sectionId + ']');
-          console.log(scrollY);
           if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight)
           {
             horizontalIndicator(scroll_target);
-                    
           }
           
-          if(scrollY >= 2087.5){
-            contact.classList.add('active');
+          if(scrollY >= 1400){
+            icons.classList.add('active');
           } else {
-            contact.classList.remove('active');
+            icons.classList.remove('active');
           }
 
       })
